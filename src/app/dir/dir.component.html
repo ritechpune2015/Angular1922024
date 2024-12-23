@@ -1,0 +1,63 @@
+<h2> Directives </h2>
+
+<h2> Ng If Then Else </h2>
+<span *ngIf="flag;then db;else el;"></span>
+<ng-template #db>
+    <ul>
+        <li> Foxpro </li>
+        <li> Sybase </li>
+        <li> Informics </li>
+        <li> DB2 </li>
+        <li> Postgre SQL </li>
+    </ul>
+</ng-template> 
+
+<ng-template #el>
+    <ul>
+        <li> Windows </li>
+        <li> Linux </li>
+        <li> Mac </li>
+        <li> Unix </li>
+        <li> Solaris</li> 
+        <li> Mainframe</li>
+    </ul>
+</ng-template>
+
+
+<!--<h2> Ng If Else </h2>
+<div *ngIf="flag;else el">
+    <ul>
+        <li> Foxpro </li>
+        <li> Sybase </li>
+        <li> Informics </li>
+        <li> DB2 </li>
+        <li> Postgre SQL </li>
+    </ul>
+</div> 
+
+<ng-template #el>
+    <ul>
+        <li> Windows </li>
+        <li> Linux </li>
+        <li> Mac </li>
+        <li> Unix </li>
+        <li> Solaris</li> 
+        <li> Mainframe</li>
+    </ul>
+</ng-template>
+-->
+<hr>
+<button (click)="toggle()"> {{flag?'Hide':'Show'}}</button>
+<div class="box" *ngIf="flag">
+</div>
+<h2> List of technologies </h2>
+<ul *ngFor="let temp of names;let i=index">
+  <li>{{i}}.{{temp}}</li>
+</ul>
+<h2> Ng Switch Case </h2>
+<ul [ngSwitch]="val">
+   <li *ngSwitchCase="0"> Value is Zero (First Li) </li>
+   <li *ngSwitchCase="1"> Value is One (Second LI) </li>
+   <li *ngSwitchCase="2"> Value is Two (Third LI) </li>
+   <li *ngSwitchDefault> Invalid Value (Default LI) </li>
+</ul>

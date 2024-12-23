@@ -1,0 +1,24 @@
+<h2> Product Component </h2>
+<button (click)="toggleshow()">Click</button>
+<table>
+    <thead>
+        <tr>
+            <th> Product ID </th>
+            <th> Product Name </th>
+            <th> Mfg Name </th>
+            <th> Price </th>
+          <!--  <th>Rating</th> -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let temp of prods">
+            <td>{{temp.productID}}</td>
+            <td>{{temp.productName}}</td>
+            <td>{{temp.mfgName}} </td>
+            <td>{{temp.price}}</td>
+           <!-- <td>{{temp.Rating}}</td> -->
+          <!--  <td><star *ngIf="show" [noofstars]="temp.Rating" ></star></td> -->
+        </tr>
+    
+    </tbody>
+</table>

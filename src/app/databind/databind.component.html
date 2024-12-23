@@ -1,0 +1,17 @@
+<h1> {{title}} </h1>
+<input type="text" size="{{qty}}" value="{{qty*price}}" /> <br>
+Amount: {{qty * price}} <br>
+Call Func:{{SayHello()}}
+<hr>
+<h1 [innerText]="title"></h1>
+<input type="text" [size]="qty" [value]="price" />
+<hr>
+<input type="button" (click)="ClickFunc()" value="Click" /> 
+<div class="box" (mouseenter)="Handle()">
+</div>
+<hr>
+One Way:<input type="text" [ngModel]="title" /> <br>
+Two Way:<input type="text" [(ngModel)]="title" /> <br>
+<hr>
+<input type="text" #txt /> {{txt}}
+<input type="button" value="show" (click)="ShowVal(txt)" />

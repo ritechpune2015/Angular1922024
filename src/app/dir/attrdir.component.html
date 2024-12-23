@@ -1,0 +1,21 @@
+<h2> Attribute Directives</h2>
+<h1 [ngStyle]="{'background-color':'orange','color':'white'}
+"> First Heading</h1>
+
+<h1 [ngStyle]="{'background-color':flag?'green':'red'}"> First Heading</h1>
+<button (click)="toggle()">Click</button> {{flag}}
+
+<div [ngClass]="{'box':flag}">
+    Welcome
+</div>
+
+<ul [hidden]="flag">
+    <li> What is Angular? </li>
+    <li> Type Script </li>
+    <li> Wroking of Angular</li>
+    <li> Component </li>
+    <li> Biding </li>
+    <li> Directives </li>
+</ul>
+
+<input type="text" [disabled]="flag" /> <br>
