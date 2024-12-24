@@ -1,11 +1,19 @@
-<h2> Demo Angular App  </h2>
-<hr>
-<a [routerLink]="['/wel']"> Home </a>  | 
-<a [routerLink]="['/dire']"> Directives  </a>  | 
-<a [routerLink]="['/databind']"> Bindings </a>  | 
-<a [routerLink]="['/prods']"> Products  </a>  | 
-<a [routerLink]="['/custs']"> Customers  </a>  | 
-<hr>
- <router-outlet></router-outlet>
-<hr>
+<div class="container">
+    <div class="row">
+ <div class="col-md-12">
+    <h2 class="text-danger"> Demo Angular App  </h2>
+    <hr>
+    <a [routerLink]="['/wel']" class="btn btn-danger"> Home </a>  | 
+    <a [routerLink]="['/dire']" class="btn btn-success"> Directives  </a>  | 
+    <a [routerLink]="['/databind']" class="btn btn-primary"> Bindings </a>  | 
+    <a [routerLink]="['/prods']" class="btn btn-info"> Products  </a>  | 
+    <a [routerLink]="['/custs']" class="btn btn-warning"> Customers  </a>  | 
+    <hr>
+     <router-outlet></router-outlet>
+    <hr>
+    
+    
+ </div>
+    </div>
 
+</div>

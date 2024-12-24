@@ -1,5 +1,5 @@
 <h2> Customer List </h2>
-<table border="1">
+<table class="table table-bordered">
     <thead>
         <tr>
             <th> Customer ID </th>
@@ -17,7 +17,7 @@
                <td>{{temp.address}}</td>
                <td>{{temp.emailID}}</td>
                <td>{{temp.mobileNo}}</td>
-               <td>{{temp.creditLimit}}</td>
+               <td>{{temp.creditLimit|custcategory}}</td>
         </tr>
     </tbody>
 </table>

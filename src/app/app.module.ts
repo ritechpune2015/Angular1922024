@@ -13,6 +13,8 @@ import { AttrDirComponent } from './dir/attrdir.component';
 import { StarComponent } from './star/star.component';
 import { CustomerComponent } from './customer/customer.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ProductdetComponent } from './product/productdet.component';
+import { CustcategoryPipe } from './customer/custcategory.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AttrDirComponent,
     StarComponent,
     CustomerComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ProductdetComponent,
+    CustcategoryPipe
   ],
   imports: [
     BrowserModule,

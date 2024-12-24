@@ -6,7 +6,7 @@ import { ProductSVR } from "./product.service";
     selector:'prod',
     standalone:false,
    // styles:['thead {background-color:orange;color:white;}','tbody {background-color:yellow;color:red;}'],
-   styleUrls:['product.component.css'],
+   //styleUrls:['product.component.css'],
     templateUrl:'product.component.html',
     providers:[ProductSVR]
 })
@@ -14,6 +14,7 @@ export class ProductCompnoent implements OnInit,OnChanges,OnDestroy
 {
   prods:IProduct[];  
   show:boolean=true;
+  dt=new Date();
   constructor(private prodsvr:ProductSVR)
   {
     console.log("Parent Constructor Called!");

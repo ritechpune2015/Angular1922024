@@ -1,6 +1,13 @@
 <h2> Product Component </h2>
+Date:{{dt}} <br>
+Date:{{dt|date:'shortDate'}} <br>
+Date:{{dt|date:'longDate'}} <br>
+Date:{{dt|date:'fullDate'}} <br>
+Short Time:{{dt|date:'shortTime'}} <br>
+Long Time:{{dt|date:'longTime'}} <br>
+Custom Date:{{dt|date:'dd-MM-yyyy hh:mm'}}
 <button (click)="toggleshow()">Click</button>
-<table>
+<table class="table table-striped">
     <thead>
         <tr>
             <th> Product ID </th>
@@ -8,16 +15,19 @@
             <th> Mfg Name </th>
             <th> Price </th>
           <!--  <th>Rating</th> -->
+            <th> Actions </th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let temp of prods">
             <td>{{temp.productID}}</td>
-            <td>{{temp.productName}}</td>
-            <td>{{temp.mfgName}} </td>
-            <td>{{temp.price}}</td>
+            <td>{{temp.productName|uppercase}}</td>
+            <td>{{temp.mfgName|lowercase}} </td>
+            <td>{{temp.price|currency:'INR'}}</td>
+            <td>{{(temp.price/1000)|percent}}</td>
            <!-- <td>{{temp.Rating}}</td> -->
           <!--  <td><star *ngIf="show" [noofstars]="temp.Rating" ></star></td> -->
+            <td> <a class="btn btn-danger" [routerLink]="['/proddet',temp.productID,temp.productName,temp.price]">Details </a></td>
         </tr>
     
     </tbody>
