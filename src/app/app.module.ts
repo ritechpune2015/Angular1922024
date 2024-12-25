@@ -15,6 +15,7 @@ import { CustomerComponent } from './customer/customer.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductdetComponent } from './product/productdet.component';
 import { CustcategoryPipe } from './customer/custcategory.pipe';
+import { ProductnewComponent } from './product/productnew.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CustcategoryPipe } from './customer/custcategory.pipe';
     CustomerComponent,
     NotFoundComponent,
     ProductdetComponent,
-    CustcategoryPipe
+    CustcategoryPipe,
+    ProductnewComponent
   ],
   imports: [
     BrowserModule,

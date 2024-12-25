@@ -1,0 +1,43 @@
+<h3> New Product </h3>
+<hr>
+<form #pfrm="ngForm" (ngSubmit)="SaveProduct(pfrm.value)">
+    <div class="form-group">
+        <label class="form-label"> Product Name </label>
+        <div class="col-5">
+            <input ngModel name="productName" type="text" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="form-label"> Mfg Name: </label>
+        <div class="col-5">
+            <input ngModel name="mfgName" type="text" class="form-control" />
+        </div>
+    </div>
+ 
+    <!--
+     <div ngModelGroup="ProdProp">
+        <div class="form-group">
+            <label class="form-label"> Color: </label>
+            <div class="col-5">
+                <input ngModel name="color" type="text" class="form-control" />
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <label class="form-label"> Model No: </label>
+            <div class="col-5">
+                <input ngModel name="modelno" type="text" class="form-control" />
+            </div>
+        </div>
+     </div>
+    -->
+    <div class="form-group">
+        <label class="form-label"> Price: </label>
+        <div class="col-5">
+            <input ngModel name="price" type="text" class="form-control" />
+        </div>
+    </div>
+    <div class="mt-2">
+        <input type="submit" value="Save" class="btn btn-danger" />
+    </div>
+</form>

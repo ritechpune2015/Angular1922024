@@ -15,4 +15,8 @@ export class ProductSVR
     {
          return this.http.get<IProduct []>(this.apiurl);
     }
+    createProduct(rec:IProduct):Observable<any>
+    {
+       return this.http.post(this.apiurl,rec,{responseType:'text'});
+    }
 }
