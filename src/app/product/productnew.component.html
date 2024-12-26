@@ -4,13 +4,23 @@
     <div class="form-group">
         <label class="form-label"> Product Name </label>
         <div class="col-5">
-            <input ngModel name="productName" type="text" class="form-control" />
+            <input ngModel #pname required name="productName" type="text" class="form-control" /> <!--{{pname.className}} -->
+
+            <span *ngIf="pfrm.controls['productName'].invalid && (pfrm.controls['productName'].dirty || pfrm.controls['productName'].touched)" class="text-danger"> 
+                Please Input Product Name </span>
         </div>
     </div>
     <div class="form-group">
         <label class="form-label"> Mfg Name: </label>
         <div class="col-5">
-            <input ngModel name="mfgName" type="text" class="form-control" />
+            <input required minlength="5" maxlength="10" ngModel name="mfgName" type="text" class="form-control" />
+
+            <div *ngIf="pfrm.controls['mfgName'].invalid && (pfrm.controls['mfgName'].dirty || pfrm.controls['mfgName'].touched)" class="text-danger"> 
+            <span *ngIf="pfrm.controls['mfgName'].hasError('required')">    Please Input Mfg Name </span>
+            <span *ngIf="pfrm.controls['mfgName'].hasError('minlength')">  Please Input At Least 5 Characters </span>
+            <span *ngIf="pfrm.controls['mfgName'].hasError('maxlength')">  Maximum 10 Characters </span>
+            </div>
+
         </div>
     </div>
  
@@ -34,10 +44,17 @@
     <div class="form-group">
         <label class="form-label"> Price: </label>
         <div class="col-5">
-            <input ngModel name="price" type="text" class="form-control" />
+            <input required min="1000" max="10000" ngModel name="price" type="number" class="form-control" />
+
+            <div *ngIf="pfrm.controls['price'].invalid && (pfrm.controls['price'].dirty || pfrm.controls['price'].touched)" class="text-danger">
+            <span [hidden]="!pfrm.controls['price'].hasError('required')">  Please Input Product Price </span>
+            <span *ngIf="pfrm.controls['price'].hasError('min')"> Minimum Price Should be  1000</span>
+            <span *ngIf="pfrm.controls['price'].hasError('max')"> Maximum Price Should be 10000</span>
+            </div>
+
         </div>
     </div>
     <div class="mt-2">
-        <input type="submit" value="Save" class="btn btn-danger" />
+        <input type="submit" [disabled]="pfrm.invalid" value="Save" class="btn btn-danger" />
     </div>
 </form>
