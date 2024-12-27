@@ -1,0 +1,6 @@
+textarea.ng-invalid,input.ng-invalid{
+    border-right:6px solid red;
+}
+textarea.ng-valid,input.ng-valid{
+    border-right:6px solid green;
+}

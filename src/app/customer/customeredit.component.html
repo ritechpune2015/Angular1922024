@@ -1,5 +1,5 @@
-<h3> New Customer </h3>
-<form [formGroup]="cfrm" (ngSubmit)="SaveCustomer()">
+<h3> Edit Customer </h3>
+<form [formGroup]="cfrm" (ngSubmit)="EditCustomer()">
     <div class="form-group">
         <label>Customer Name:</label>
         <div class="col-md-5">
@@ -120,7 +120,8 @@
     </div>
 
     <div class="mt-3">
-        <input type="submit" [disabled]="cfrm.invalid" value="Save" class="btn btn-danger" />
+        <input type="submit" [disabled]="cfrm.invalid" value="Update" class="btn btn-danger" />
+        | <a class="btn btn-danger ms-3" [routerLink]="['/custs']"> Back </a>
     </div>
 
 </form>

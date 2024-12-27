@@ -17,6 +17,7 @@ import { ProductdetComponent } from './product/productdet.component';
 import { CustcategoryPipe } from './customer/custcategory.pipe';
 import { ProductnewComponent } from './product/productnew.component';
 import { CustomernewComponent } from './customer/customernew.component';
+import { CustomereditComponent } from './customer/customeredit.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CustomernewComponent } from './customer/customernew.component';
     ProductdetComponent,
     CustcategoryPipe,
     ProductnewComponent,
-    CustomernewComponent
+    CustomernewComponent,
+    CustomereditComponent
   ],
   imports: [
     BrowserModule,

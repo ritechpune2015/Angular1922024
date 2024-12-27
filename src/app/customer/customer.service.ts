@@ -16,4 +16,17 @@ export class CustomerService {
   {
      return this.httpclient.get<ICustomer []>(this.apiurl); 
   }
+
+  getByCustomerID(id:number):Observable<ICustomer>
+  {
+    //var str=this.apiurl+"/"+id;
+   // alert(id);
+    var str =`${this.apiurl}\\${id}`;
+    return this.httpclient.get<ICustomer>(str);
+  }
+
+  createCustomer(rec:ICustomer):Observable<any>
+  {
+   return this.httpclient.post(this.apiurl,rec,{responseType:'text'});
+  }
 }
