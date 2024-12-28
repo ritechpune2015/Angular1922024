@@ -10,6 +10,7 @@ import { ProductdetComponent } from './product/productdet.component';
 import { ProductnewComponent } from './product/productnew.component';
 import { CustomernewComponent } from './customer/customernew.component';
 import { CustomereditComponent } from './customer/customeredit.component';
+import { CustomerdeleteComponent } from './customer/customerdelete/customerdelete.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'wel',pathMatch:'full'},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path:'custs',component:CustomerComponent,title:"Customer List"},
   {path:'custnew',component:CustomernewComponent},
   {path:'custedit/:cid',component:CustomereditComponent},
+  {path:'custedelete/:cid',component:CustomerdeleteComponent},
   {path:'databind',component:DataBindComponent,title:"Data Binding"},
   {path:'dire',component:DirComponent,title:"Directvie Example!"},
   {path:'**',component:NotFoundComponent,title:"Not Found"},

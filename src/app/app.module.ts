@@ -18,6 +18,8 @@ import { CustcategoryPipe } from './customer/custcategory.pipe';
 import { ProductnewComponent } from './product/productnew.component';
 import { CustomernewComponent } from './customer/customernew.component';
 import { CustomereditComponent } from './customer/customeredit.component';
+import { CustomerdeleteComponent } from './customer/customerdelete/customerdelete.component';
+import { HighLightDirective } from './high-light.directive';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { CustomereditComponent } from './customer/customeredit.component';
     CustcategoryPipe,
     ProductnewComponent,
     CustomernewComponent,
-    CustomereditComponent
+    CustomereditComponent,
+    CustomerdeleteComponent,
+    HighLightDirective
   ],
   imports: [
     BrowserModule,

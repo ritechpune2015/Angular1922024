@@ -29,4 +29,14 @@ export class CustomerService {
   {
    return this.httpclient.post(this.apiurl,rec,{responseType:'text'});
   }
+
+  editCustomer(rec:ICustomer):Observable<any>
+  {
+   return this.httpclient.put(this.apiurl,rec,{responseType:'text'});
+  }
+
+  deleteCustomer(cid:number):Observable<any>
+  {
+    return this.httpclient.delete(this.apiurl+"/"+ cid,{responseType:'text'});
+  }
 }

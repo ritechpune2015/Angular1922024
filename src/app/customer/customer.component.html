@@ -24,6 +24,8 @@
                <td>{{temp.creditLimit|custcategory}}</td>
                <td>
                   <a [routerLink]="['/custedit',temp.customerID]" class="btn btn-primary"> Edit </a>
+                    <a [routerLink]="['/custedelete',temp.customerID]" class="btn btn-primary"> Delete 
+                  </a>
                </td>
         </tr>
     </tbody>
