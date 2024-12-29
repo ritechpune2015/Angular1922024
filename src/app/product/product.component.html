@@ -9,7 +9,7 @@ Custom Date:{{dt|date:'dd-MM-yyyy hh:mm'}}
 <button (click)="toggleshow()">Click</button>
 -->
 <a [routerLink]="['/prodnew']" class="btnb btn-danger"> New Product </a>
-
+<h1>Child Message:{{msg}}</h1>
 <table class="table table-striped">
     <thead>
         <tr>
@@ -17,7 +17,7 @@ Custom Date:{{dt|date:'dd-MM-yyyy hh:mm'}}
             <th> Product Name </th>
             <th> Mfg Name </th>
             <th> Price </th>
-          <!--  <th>Rating</th> -->
+            <th>Rating</th> 
             <th> Actions </th>
         </tr>
     </thead>
@@ -27,9 +27,9 @@ Custom Date:{{dt|date:'dd-MM-yyyy hh:mm'}}
             <td>{{temp.productName|uppercase}}</td>
             <td>{{temp.mfgName|lowercase}} </td>
             <td>{{temp.price|currency:'INR'}}</td>
-            <td>{{(temp.price/1000)|percent}}</td>
-           <!-- <td>{{temp.Rating}}</td> -->
-          <!--  <td><star *ngIf="show" [noofstars]="temp.Rating" ></star></td> -->
+          <!--  <td>{{(temp.price/1000)|percent}}</td> -->
+          <!--  <td>{{temp.rating}}</td>  -->
+          <td class="text-center"><star (qualityevent)="DisplayQuality($event)" *ngIf="show" [noofstars]="temp.rating" ></star></td> 
             <td> <a class="btn btn-danger" [routerLink]="['/proddet',temp.productID,temp.productName,temp.price]">Details </a></td>
         </tr>
     

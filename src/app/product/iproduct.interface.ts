@@ -4,5 +4,5 @@ export interface IProduct
     productName:string;
     mfgName:string;
     price:number;
-    //Rating:number;
+    rating:number;
 }

@@ -14,6 +14,7 @@ export class ProductCompnoent implements OnInit,OnChanges,OnDestroy
 {
   prods:IProduct[];  
   show:boolean=true;
+  msg:any;
   dt=new Date();
   constructor(private prodsvr:ProductSVR)
   {
@@ -21,10 +22,15 @@ export class ProductCompnoent implements OnInit,OnChanges,OnDestroy
    this.prods=[];
   }
 
+  DisplayQuality(quality:any):void
+  {
+   this.msg=quality;
+  }
   toggleshow()
   {
     this.show=!this.show;
   }
+  
   ngOnInit(): void {
     console.log("Parent On Init Called!");
     this.prodsvr.getProducts().subscribe(
